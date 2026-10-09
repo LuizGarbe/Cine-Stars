@@ -1,0 +1,21 @@
+CINESTARS — CATÁLOGO DE ATORES
+Projeto acadêmico de HTML, CSS e JavaScript.
+
+COMO EXECUTAR
+1. Extraia a pasta CineStars.zip.
+2. Abra a pasta CineStars.
+3. Dê dois cliques em index.html para abrir no navegador.
+4. Para desenvolvimento, você também pode abrir a pasta no VS Code e usar a extensão Live Server.
+
+IMPORTANTE
+- Mantenha index.html, style.css, script.js e dados.js na mesma pasta.
+- O arquivo dados.js é o material original fornecido para a atividade.
+- As fotos são carregadas da internet; é necessário ter conexão para visualizá-las.
+- O filtro utiliza oninput, filter() e includes(), conforme solicitado.
+
+PUBLICAR NO GITHUB PAGES
+1. Crie um repositório público no GitHub.
+2. Envie os quatro arquivos principais (index.html, style.css, script.js e dados.js) para a raiz do repositório.
+3. Vá em Settings > Pages.
+4. Em Build and deployment, selecione Deploy from a branch, branch main e pasta /(root).
+5. Salve e aguarde a publicação.

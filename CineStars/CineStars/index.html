@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de atores e atrizes com busca dinâmica.">
+    <title>CineStars | Catálogo de Atores</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="dados.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <section class="introducao">
+            <p class="etiqueta">EXPLORE O UNIVERSO DOS ATORES DO CINEMA</p>
+            <h1>Grandes nomes.<br></h1>
+            <p class="descricao">
+                Conheça atores e atrizes, descubra suas origens
+                e explore o talento por trás das telas.
+            </p>
+        </section>
+
+        <section class="catalogo">
+            <div class="titulo-catalogo">
+                <div>
+                    <p class="etiqueta">NOSSO CATÁLOGO</p>
+                    <h2>Elenco em destaque</h2>
+                </div>
+                <span id="contador" class="contador" aria-live="polite"></span>
+            </div>
+
+            <label class="busca">
+                <span class="icone-busca" aria-hidden="true">⌕</span>
+                <input
+                    type="text"
+                    id="campoBusca"
+                    placeholder="Buscar ator ou atriz..."
+                    oninput="filtrarAtores()"
+                    aria-label="Buscar ator ou atriz pelo nome"
+                >
+            </label>
+
+            <div id="gridAtores" class="grid-atores"></div>
+            <p id="mensagemVazia" class="mensagem-vazia" hidden>
+                Nenhum ator ou atriz encontrado. Tente outro nome.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>CINESTARS © 2026 — Catálogo de atores e atrizes</p>
+        <p>Projeto acadêmico • CheckPoint de Desenvolvimento Web</p>
+    </footer>
+</body>
+</html>

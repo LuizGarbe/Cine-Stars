@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+    --fundo: #101010;
+    --superficie: #191919;
+    --texto: #f5f0e8;
+    --texto-secundario: #a6a19a;
+    --dourado: #d9ad65;
+    --borda: #303030;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+}
+
+.cabecalho {
+    min-height: 76px;
+    padding: 20px 7%;
+    border-bottom: 1px solid var(--borda);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.logo {
+    color: var(--texto);
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--dourado);
+}
+
+.subtitulo,
+.etiqueta {
+    color: var(--dourado);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.container {
+    width: min(1200px, 86%);
+    margin: 0 auto;
+}
+
+.introducao {
+    padding: 75px 0 65px;
+    border-bottom: 1px solid var(--borda);
+}
+
+.introducao h1 {
+    margin: 18px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 6vw, 66px);
+    line-height: 1.12;
+}
+
+.introducao h1 span {
+    color: var(--dourado);
+}
+
+.descricao {
+    max-width: 490px;
+    color: var(--texto-secundario);
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.catalogo {
+    padding: 48px 0 75px;
+}
+
+.titulo-catalogo {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 26px;
+}
+
+.titulo-catalogo h2 {
+    margin-top: 8px;
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+}
+
+.contador {
+    color: var(--texto-secundario);
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.busca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--superficie);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    padding: 0 17px;
+    margin-bottom: 30px;
+    transition: border-color 0.2s;
+}
+
+.busca:focus-within {
+    border-color: var(--dourado);
+}
+
+.icone-busca {
+    color: var(--dourado);
+    font-size: 28px;
+}
+
+.busca input {
+    width: 100%;
+    padding: 17px 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--texto);
+    font: inherit;
+    font-size: 14px;
+}
+
+.busca input::placeholder {
+    color: #77716b;
+}
+
+.grid-atores {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px 18px;
+}
+
+.card-ator {
+    min-width: 0;
+    overflow: hidden;
+    background: var(--superficie);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    transition: transform 0.25s, border-color 0.25s;
+}
+
+.card-ator:hover {
+    transform: translateY(-5px);
+    border-color: var(--dourado);
+}
+
+.foto-ator {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    display: block;
+    object-fit: cover;
+    object-position: center 25%;
+    background: #242424;
+}
+
+.informacoes-ator {
+    padding: 16px 14px 18px;
+}
+
+.informacoes-ator h3 {
+    margin-bottom: 14px;
+    font-size: 16px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.dado-ator {
+    margin-top: 9px;
+    color: var(--texto-secundario);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.dado-ator strong {
+    display: block;
+    margin-bottom: 2px;
+    color: var(--dourado);
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.mensagem-vazia {
+    padding: 40px 10px;
+    color: var(--texto-secundario);
+    text-align: center;
+}
+
+.mensagem-vazia[hidden] {
+    display: none;
+}
+
+footer {
+    padding: 25px 7%;
+    border-top: 1px solid var(--borda);
+    color: var(--texto-secundario);
+    text-align: center;
+    font-size: 12px;
+    line-height: 2;
+}
+
+@media (max-width: 950px) {
+    .grid-atores {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .cabecalho {
+        padding: 18px 6%;
+    }
+
+    .subtitulo {
+        font-size: 9px;
+        text-align: right;
+    }
+
+    .container {
+        width: 88%;
+    }
+
+    .introducao {
+        padding: 55px 0 45px;
+    }
+
+    .grid-atores {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px 10px;
+    }
+
+    .informacoes-ator {
+        padding: 12px 10px 14px;
+    }
+
+    .informacoes-ator h3 {
+        font-size: 14px;
+    }
+
+    .dado-ator {
+        font-size: 11px;
+    }
+
+    .titulo-catalogo h2 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 360px) {
+    .grid-atores {
+        grid-template-columns: 1fr;
+    }
+}
