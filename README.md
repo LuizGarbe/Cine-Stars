@@ -60,7 +60,7 @@ Este projeto tem como objetivo praticar conceitos fundamentais de desenvolviment
 
 ## 👨‍💻 Autor
 
-Desenvolvido por Luiz Correia Garbeloto como atividade acadêmica do curso de Ciência da Computação da FIAP.
+Desenvolvido por Luiz Garbeloto como atividade acadêmica do curso de Ciência da Computação da FIAP.
 
 ---
 
